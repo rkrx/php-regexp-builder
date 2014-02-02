@@ -1,12 +1,11 @@
-php-regexp-builder
-==================
-
-Human-friendly regular expression authoring
-
-```PHP
 <?php
+namespace Example;
 
-/* ... */
+use Kir\RegExp\Builder\RegExpBuilder;
+use Kir\RegExp\Builder\RegExpBuilder\SpecialCharacter\AnyLetter;
+use Kir\RegExp\Builder\RegExpBuilder\SpecialCharacter\AnyDigit;
+
+require 'vendor/autoload.php';
 
 $factory = new RegExpBuilder();
 
@@ -35,4 +34,5 @@ var_dump($res);
 
 $res = $pattern->getGroups('max.mustermann+github@googlemail.com');
 var_dump($res);
-```
+
+

@@ -1,0 +1,15 @@
+<phpunit bootstrap="tests/bootstrap.php"
+		 backupGlobals="false"
+		 backupStaticAttributes="false"
+		 strict="true"
+		 verbose="true"
+		 timeoutForSmallTests="5">
+	<testsuites>
+		<testsuite name="RegExpWizard">
+			<file>tests/Kir/RegExp/Builder/RegExpBuilder/Objects/CaseSensitiveTest.php</file>
+			<file>tests/Kir/RegExp/Builder/RegExpBuilder/Objects/CaseInsensitiveTest.php</file>
+			<file>tests/Kir/RegExp/Builder/RegExpBuilder/BuilderTest.php</file>
+			<file>tests/Kir/RegExp/Builder/RegExpBuilderTest.php</file>
+		</testsuite>
+	</testsuites>
+</phpunit>
