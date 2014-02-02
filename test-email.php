@@ -9,15 +9,19 @@ require 'vendor/autoload.php';
 
 $factory = new RegExpBuilder();
 
+$invalidEndingCharacters = $factory->createBuilder()
+->expectAnyOf('.-')
+->once();
+
 $namePattern = $factory::createBuilder()
-->assertNotPrecededBy($factory->createBuilder()->expectAnyOf('.-')->once())
+->assertNotPrecededBy($invalidEndingCharacters)
 ->expectAnyOf(['._-+', new AnyLetter, new AnyDigit])->onceOrMore()
-->assertNotFollowedBy($factory->createBuilder()->expectAnyOf('.-')->once());
+->assertNotFollowedBy($invalidEndingCharacters);
 
 $domainPattern = $factory::createBuilder()
-->assertNotPrecededBy($factory->createBuilder()->expectAnyOf('.-')->once())
+->assertNotPrecededBy($invalidEndingCharacters)
 ->expectAnyOf(['.-', new AnyLetter, new AnyDigit])->onceOrMore()
-->assertNotFollowedBy($factory->createBuilder()->expectAnyOf('.-')->once());
+->assertNotFollowedBy($invalidEndingCharacters);
 
 $pattern = $factory::createBuilder()
 ->lineStart()
