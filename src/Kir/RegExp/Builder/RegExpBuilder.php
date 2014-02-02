@@ -12,11 +12,4 @@ class RegExpBuilder extends Builder {
 		$stream = new Builder\Stream();
 		parent::__construct($modifiers, $stream);
 	}
-
-	/**
-	 * @return RegExpBuilder\Builder
-	 */
-	public static function createInstance() {
-		return new static();
-	}
 }

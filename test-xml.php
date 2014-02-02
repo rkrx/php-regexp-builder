@@ -8,29 +8,29 @@ require 'vendor/autoload.php';
 
 $factory = new RegExpBuilder();
 
-$tagName = $factory::createBuilder()
+$tagName = (new RegExpBuilder)
 ->expectAnyOf(['-', new SpecialCharacter\AnyLetter])->onceOrMore();
 
-$attribute = $factory::createBuilder()
+$attribute = (new RegExpBuilder)
 ->expect(new SpecialCharacter\AnySpace)->onceOrMore()
 ->expect($tagName)->once()
 ->expect('="')->once()
 ->expectAny()->zeroOrMore()
 ->expect('"')->once();
 
-$tagStart = $factory::createBuilder()
+$tagStart = (new RegExpBuilder)
 ->expect('<')->once()
 ->group($tagName, 'tag')->once()
 ->group($attribute)->zeroOrMore()
 ->expect('>')->once();
 
-$tagEnd = $factory::createBuilder()
+$tagEnd = (new RegExpBuilder)
 ->expect(['</', new SpecialCharacter\BackReference('tag'), '>'])->once();
 
-$textContent = $factory::createBuilder()
+$textContent = (new RegExpBuilder)
 ->expectNoneOf('<>')->onceOrMore();
 
-$tagBody = $factory::createBuilder()
+$tagBody = (new RegExpBuilder)
 #->group($textContent, 'textBefore')->zeroOrOnce()
 ->group($tagStart, 'tagStart')->once()
 ->group($textContent, 'content')->zeroOrOnce()
@@ -39,7 +39,7 @@ $tagBody = $factory::createBuilder()
 #->group($textContent, 'textAfter')->zeroOrOnce()
 ;
 
-$pattern = $factory::createBuilder()
+$pattern = (new RegExpBuilder)
 ->group($tagBody, 'body')->once();
 
 echo "{$pattern}\n";

@@ -6,13 +6,12 @@ use Kir\RegExp\Builder\RegExpBuilder\SpecialCharacter;
 
 require 'vendor/autoload.php';
 
-$pattern = RegExpBuilder::createBuilder()
+$pattern = (new RegExpBuilder)
 ->assertNotPrecededBy(
-	RegExpBuilder::createBuilder()
+	(new RegExpBuilder)
 	->expect('\\')->once()
-)
-->expect(
-	RegExpBuilder::createBuilder()
+)->expect(
+	(new RegExpBuilder)
 	->expect('\\')->exactly(2)
 )->zeroOrMore()
 ->expect('?')->once()

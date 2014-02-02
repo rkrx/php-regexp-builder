@@ -6,13 +6,12 @@ use Kir\RegExp\Builder\RegExpBuilder\SpecialCharacter;
 
 require 'vendor/autoload.php';
 
-$factory = new RegExpBuilder;
-$pattern = $factory::createBuilder()
+$pattern = (new RegExpBuilder)
 ->lineStart()
 ->expect(['hello', new SpecialCharacter\AnySpace, 'world'])->once()
 ->expectAnyOf('[]')->once()
 ->expect(
-		$factory::createBuilder()
+		(new RegExpBuilder)
 		->expect('test')->once()
 		->expect(' ')->once()
 		->expect(new SpecialCharacter\UTF8(8364))->once()

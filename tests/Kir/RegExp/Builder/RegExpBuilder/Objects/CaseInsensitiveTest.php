@@ -5,7 +5,7 @@ use Kir\RegExp\Builder\RegExpBuilder;
 
 class CaseInsensitiveTest extends \PHPUnit_Framework_TestCase {
 	public function test() {
-		$pattern = RegExpBuilder::createBuilder()
+		$pattern = (new RegExpBuilder)
 		->expect(new CaseInsensitive(new Text('<test>')))->once()
 		->compile();
 

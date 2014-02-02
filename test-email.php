@@ -7,23 +7,21 @@ use Kir\RegExp\Builder\RegExpBuilder\SpecialCharacter\AnyDigit;
 
 require 'vendor/autoload.php';
 
-$factory = new RegExpBuilder();
-
-$invalidEndingCharacters = $factory->createBuilder()
+$invalidEndingCharacters = (new RegExpBuilder)
 ->expectAnyOf('.-')
 ->once();
 
-$namePattern = $factory::createBuilder()
+$namePattern = (new RegExpBuilder)
 ->assertNotPrecededBy($invalidEndingCharacters)
 ->expectAnyOf(['._-+', new AnyLetter, new AnyDigit])->onceOrMore()
 ->assertNotFollowedBy($invalidEndingCharacters);
 
-$domainPattern = $factory::createBuilder()
+$domainPattern = (new RegExpBuilder)
 ->assertNotPrecededBy($invalidEndingCharacters)
 ->expectAnyOf(['.-', new AnyLetter, new AnyDigit])->onceOrMore()
 ->assertNotFollowedBy($invalidEndingCharacters);
 
-$pattern = $factory::createBuilder()
+$pattern = (new RegExpBuilder)
 ->lineStart()
 ->group($namePattern, 'a')->once()
 ->expect('@')->once()

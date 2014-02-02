@@ -64,7 +64,7 @@ class BuilderTest extends \PHPUnit_Framework_TestCase {
 		$attribute = $this->createBuilder()
 		->expect(new SpecialCharacter\AnySpace())->onceOrMore()
 		->expect($tagName)->once()
-		->expect('"')->once()
+		->expect('="')->once()
 		->expectAny()->zeroOrMore()
 		->expect('"')->once();
 
@@ -91,8 +91,8 @@ class BuilderTest extends \PHPUnit_Framework_TestCase {
 		->group($tagBody, 'body')->once()
 		->compile();
 
-		$this->assertTrue($pattern->test('aaa <hello><a>test</a></hello> bbb'));
-		$this->assertFalse($pattern->test('aaa <hello><a>test</a></world> bbb'));
+		$this->assertTrue($pattern->test('aaa <a href="uri:none">test</a> bbb'));
+		$this->assertFalse($pattern->test('aaa <a href="uri:none">test</b> bbb'));
 	}
 
 	private function _testMultipliers($expectedPattern, \Closure $func) {
@@ -106,7 +106,7 @@ class BuilderTest extends \PHPUnit_Framework_TestCase {
 	 * @return Builder
 	 */
 	private function createBuilder() {
-		return RegExpBuilder::createBuilder();
+		return (new RegExpBuilder);
 	}
 }
  
