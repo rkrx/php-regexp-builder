@@ -3,14 +3,20 @@ namespace Kir\RegExp\Builder;
 
 use Kir\RegExp\Builder\RegExpBuilder\Builder;
 
-class RegExpBuilder {
+class RegExpBuilder extends Builder {
 	/**
-	 * @return RegExpBuilder\Builder
 	 */
-	public static function createBuilder() {
+	public function __construct() {
 		$modifiers = new Builder\Modifiers();
 		$modifiers->addModifier('u');
 		$stream = new Builder\Stream();
-		return new Builder($modifiers, $stream);
+		parent::__construct($modifiers, $stream);
+	}
+
+	/**
+	 * @return RegExpBuilder\Builder
+	 */
+	public static function createInstance() {
+		return new static();
 	}
 }
