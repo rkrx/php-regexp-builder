@@ -32,9 +32,7 @@ $pattern = (new RegExpBuilder)
 echo "{$pattern}\n";
 
 $res = $pattern->test('max.mustermann+github@googlemail.com');
-var_dump($res);
+var_dump($res); // true
 
 $res = $pattern->getGroups('max.mustermann+github@googlemail.com');
-var_dump($res);
-
-
+print_r($res);

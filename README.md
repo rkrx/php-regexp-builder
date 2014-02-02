@@ -33,8 +33,21 @@ $pattern = (new RegExpBuilder)
 echo "{$pattern}\n";
 
 $res = $pattern->test('max.mustermann+github@googlemail.com');
-var_dump($res);
+var_dump($res); // true
 
 $res = $pattern->getGroups('max.mustermann+github@googlemail.com');
-var_dump($res);
+print_r($res);
+```
+
+Output:
+```
+/^(?P<a>(?<![\.\-])[\._\-\+\p{L}\d]+?(?![\.\-]))(?:@)(?P<b>(?<![\.\-])[\.\-\p{L}\d]+?(?![\.\-]))$/u
+bool(true)
+Array
+(
+    [a] => max.mustermann+github
+    [0] => max.mustermann+github
+    [b] => googlemail.com
+    [1] => googlemail.com
+)
 ```
