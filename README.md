@@ -3,6 +3,8 @@ php-regexp-builder
 
 Human-friendly regular expression authoring
 
+[![Build Status](https://travis-ci.org/rkrx/php-regexp-builder.svg?branch=master)](https://travis-ci.org/rkrx/php-regexp-builder)
+
 ```PHP
 <?php
 
