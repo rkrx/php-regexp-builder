@@ -1,3 +1,9 @@
-composer.lock
-vendor
-.idea
+/*
+!/src
+!/tests
+!/.gitignore
+!/.travis.yml
+!/composer.json
+!/LICENSE
+!/README.md
+!/tests.xml

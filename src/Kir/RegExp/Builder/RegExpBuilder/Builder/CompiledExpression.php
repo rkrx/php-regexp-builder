@@ -24,7 +24,7 @@ class CompiledExpression {
 
 	/**
 	 * @param string $string
-	 * @return bool
+	 * @return string[]
 	 */
 	public function getGroups($string) {
 		$groups = array();
