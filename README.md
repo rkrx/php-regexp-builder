@@ -6,7 +6,7 @@ Human-friendly regular expression authoring
 [![SensioLabsInsight](https://insight.sensiolabs.com/projects/78f02236-5fb2-4d26-b16c-350d96ac957e/mini.png)](https://insight.sensiolabs.com/projects/78f02236-5fb2-4d26-b16c-350d96ac957e)
 [![Build Status](https://travis-ci.org/rkrx/php-regexp-builder.svg?branch=master)](https://travis-ci.org/rkrx/php-regexp-builder)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/rkrx/php-regexp-builder/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/rkrx/php-regexp-builder/?branch=master)
-[![License](https://img.shields.io/packagist/l/rkr/regexp-builder.svg)](https://img.shields.io/packagist/l/rkr/regexp-builder.svg)
+[![Packagist](https://img.shields.io/packagist/l/rkr/regexp-builder.svg)](https://packagist.org/packages/rkr/regexp-builder)
 
 
 ```PHP
