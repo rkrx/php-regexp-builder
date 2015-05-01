@@ -6,9 +6,7 @@ use Kir\RegExp\Builder\RegExpBuilder\Expression;
 class Text implements Expression {
 	use Expression\CacheAware;
 
-	/**
-	 * @var string
-	 */
+	/** @var string */
 	private $expression = null;
 
 	/**

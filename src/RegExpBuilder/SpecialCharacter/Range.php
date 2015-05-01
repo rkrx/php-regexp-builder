@@ -4,10 +4,10 @@ namespace Kir\RegExp\Builder\RegExpBuilder\SpecialCharacter;
 use Kir\RegExp\Builder\RegExpBuilder\SpecialCharacter;
 
 class Range implements SpecialCharacter {
-	/**
-	 * @var string
-	 */
-	private $start, $end;
+	/** @var string */
+	private $start;
+	/** @var string */
+	private $end;
 
 	/**
 	 * @param string $start

@@ -4,9 +4,7 @@ namespace Kir\RegExp\Builder\RegExpBuilder\SpecialCharacter;
 use Kir\RegExp\Builder\RegExpBuilder\SpecialCharacter;
 
 class BackReference implements SpecialCharacter {
-	/**
-	 * @var string
-	 */
+	/** @var string */
 	private $alias = null;
 
 	/**

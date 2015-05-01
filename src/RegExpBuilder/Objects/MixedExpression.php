@@ -7,9 +7,7 @@ use Kir\RegExp\Builder\RegExpBuilder\Builder\Helper;
 class MixedExpression implements Expression {
 	use Expression\CacheAware;
 
-	/**
-	 * @var string
-	 */
+	/** @var string */
 	private $expression = null;
 
 	/**

@@ -6,9 +6,7 @@ use Kir\RegExp\Builder\RegExpBuilder\Expression;
 class NegativeLookBehind implements Expression {
 	use Expression\CacheAware;
 
-	/**
-	 * @var Expression
-	 */
+	/** @var Expression */
 	private $expression = null;
 
 	/**

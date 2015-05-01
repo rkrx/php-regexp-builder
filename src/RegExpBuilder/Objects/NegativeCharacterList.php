@@ -7,9 +7,7 @@ use Kir\RegExp\Builder\RegExpBuilder\Builder\Helper;
 class NegativeCharacterList implements Expression {
 	use Expression\CacheAware;
 
-	/**
-	 * @var string|array
-	 */
+	/** @var string|array */
 	private $characterList = '';
 
 	/**

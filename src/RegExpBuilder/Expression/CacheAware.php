@@ -4,14 +4,9 @@ namespace Kir\RegExp\Builder\RegExpBuilder\Expression;
 use \Closure;
 
 trait CacheAware {
-	/**
-	 * @var mixed
-	 */
+	/** @var mixed */
 	private $cache = null;
-
-	/**
-	 * @var bool
-	 */
+	/** @var bool */
 	private $cached = false;
 
 	/**

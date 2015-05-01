@@ -8,9 +8,7 @@ use Kir\RegExp\Builder\RegExpBuilder\SpecialCharacter;
 class OrExpression implements Expression {
 	use Expression\CacheAware;
 
-	/**
-	 * @var MixedExpression[]
-	 */
+	/** @var MixedExpression[] */
 	private $expressions;
 
 	/**

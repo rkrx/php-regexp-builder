@@ -6,9 +6,7 @@ use Kir\RegExp\Builder\RegExpBuilder\Expression;
 class PositiveLookAhead implements Expression {
 	use Expression\CacheAware;
 
-	/**
-	 * @var MixedExpression
-	 */
+	/** @var MixedExpression */
 	private $expression = null;
 
 	/**

@@ -7,9 +7,7 @@ class UTF8 implements SpecialCharacter {
 	const HEX = 0;
 	const INT = 1;
 
-	/**
-	 * @var string
-	 */
+	/** @var string */
 	private $character = null;
 
 	/**

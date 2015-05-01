@@ -6,14 +6,9 @@ use Kir\RegExp\Builder\RegExpBuilder\Expression;
 class Group implements Expression {
 	use Expression\CacheAware;
 
-	/**
-	 * @var Expression|string
-	 */
+	/** @var Expression|string */
 	private $expression = null;
-
-	/**
-	 * @var string|null
-	 */
+	/** @var string|null */
 	private $alias = null;
 
 	/**

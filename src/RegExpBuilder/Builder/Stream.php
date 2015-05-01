@@ -2,9 +2,7 @@
 namespace Kir\RegExp\Builder\RegExpBuilder\Builder;
 
 class Stream {
-	/**
-	 * @var object[]
-	 */
+	/** @var object[] */
 	private $objects = '';
 
 	/**

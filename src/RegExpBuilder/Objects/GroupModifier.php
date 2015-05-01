@@ -6,19 +6,11 @@ use Kir\RegExp\Builder\RegExpBuilder\Expression;
 abstract class GroupModifier implements Expression {
 	use Expression\CacheAware;
 
-	/**
-	 * @var Expression
-	 */
+	/** @var Expression */
 	private $expression = null;
-
-	/**
-	 * @var string
-	 */
+	/** @var string */
 	private $modifierStart = null;
-
-	/**
-	 * @var string
-	 */
+	/** @var string */
 	private $modifierEnd = null;
 
 	/**

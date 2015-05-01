@@ -2,9 +2,7 @@
 namespace Kir\RegExp\Builder\RegExpBuilder\Builder;
 
 class Modifiers {
-	/**
-	 * @var array
-	 */
+	/** @var array */
 	private $modifiers = array();
 
 	/**

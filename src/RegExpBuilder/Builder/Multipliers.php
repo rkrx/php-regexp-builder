@@ -4,14 +4,9 @@ namespace Kir\RegExp\Builder\RegExpBuilder\Builder;
 use Kir\RegExp\Builder\RegExpBuilder\Builder;
 
 class Multipliers {
-	/**
-	 * @var Stream
-	 */
+	/** @var Stream */
 	private $stream = null;
-
-	/**
-	 * @var Builder
-	 */
+	/** @var Builder */
 	private $builder = null;
 
 	/**

@@ -4,9 +4,7 @@ namespace Kir\RegExp\Builder\RegExpBuilder\Objects;
 use Kir\RegExp\Builder\RegExpBuilder\Expression;
 
 class Plain implements Expression {
-	/**
-	 * @var string
-	 */
+	/** @var string */
 	private $plain = null;
 
 	/**

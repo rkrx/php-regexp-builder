@@ -2,9 +2,7 @@
 namespace Kir\RegExp\Builder\RegExpBuilder\Builder;
 
 class CompiledExpression {
-	/**
-	 * @var string
-	 */
+	/** @var string */
 	private $pattern = '';
 
 	/**
