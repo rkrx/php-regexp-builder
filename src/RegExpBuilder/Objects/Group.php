@@ -35,4 +35,4 @@ class Group implements Expression {
 			return "({$group}{$expression})";
 		});
 	}
-} 
+}

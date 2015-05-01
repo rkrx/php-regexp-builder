@@ -28,4 +28,4 @@ class CharacterList implements Expression {
 			return "[{$characters}]";
 		});
 	}
-} 
+}

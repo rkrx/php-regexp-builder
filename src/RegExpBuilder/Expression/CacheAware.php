@@ -25,4 +25,4 @@ trait CacheAware {
 		}
 		return $this->cache;
 	}
-} 
+}

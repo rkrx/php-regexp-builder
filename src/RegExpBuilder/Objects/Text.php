@@ -27,4 +27,4 @@ class Text implements Expression {
 			return preg_quote($expression, '/');
 		});
 	}
-} 
+}

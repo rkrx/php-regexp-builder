@@ -22,4 +22,4 @@ class BackReference implements SpecialCharacter {
 	public function __toString() {
 		return "(?P={$this->alias})";
 	}
-} 
+}

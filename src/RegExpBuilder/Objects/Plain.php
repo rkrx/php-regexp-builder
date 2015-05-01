@@ -22,4 +22,4 @@ class Plain implements Expression {
 	public function __toString() {
 		return $this->plain;
 	}
-} 
+}

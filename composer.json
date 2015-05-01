@@ -1,6 +1,7 @@
 {
 	"name": "rkr/regexp-builder",
 	"description": "A builder for regular expressions",
+	"license": "MIT",
 	"require": {
 		"php": ">= 5.4"
 	},

@@ -31,4 +31,4 @@ class Stream {
 		}
 		return $result;
 	}
-} 
+}

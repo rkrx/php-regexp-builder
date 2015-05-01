@@ -32,4 +32,4 @@ class MixedExpression implements Expression {
 			return Helper::quote($expression);
 		});
 	}
-} 
+}

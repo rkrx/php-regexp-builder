@@ -27,4 +27,4 @@ class NonCapturingGroup implements Expression {
 			return "(?:{$expression})";
 		});
 	}
-} 
+}

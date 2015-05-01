@@ -10,4 +10,4 @@ class Any implements SpecialCharacter {
 	public function __toString() {
 		return '.';
 	}
-} 
+}

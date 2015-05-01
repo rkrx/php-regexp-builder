@@ -6,4 +6,4 @@ interface SpecialCharacter extends Expression {
 	 * @return string
 	 */
 	public function __toString();
-} 
+}
