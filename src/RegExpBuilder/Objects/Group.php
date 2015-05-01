@@ -8,18 +8,18 @@ class Group implements Expression {
 	use Expression\CacheAware;
 
 	/**
-	 * @var string
+	 * @var Expression|string
 	 */
 	private $expression = null;
 
 	/**
-	 * @var null|string
+	 * @var string|null
 	 */
 	private $alias = null;
 
 	/**
-	 * @param Expression $expression
-	 * @param null|string $alias
+	 * @param Expression|string $expression
+	 * @param string|null $alias
 	 */
 	public function __construct($expression, $alias = null) {
 		$this->expression = $expression;
