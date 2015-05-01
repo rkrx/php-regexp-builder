@@ -3,7 +3,6 @@ namespace Kir\RegExp\Builder\RegExpBuilder\Objects;
 
 use Kir\RegExp\Builder\RegExpBuilder\Builder;
 use Kir\RegExp\Builder\RegExpBuilder\Expression;
-use Kir\RegExp\Builder\RegExpBuilder\Expression\CacheAware;
 use Kir\RegExp\Builder\RegExpBuilder\SpecialCharacter;
 
 class OrExpression implements Expression {

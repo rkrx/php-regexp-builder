@@ -13,6 +13,8 @@ class UTF8 implements SpecialCharacter {
 	private $character = null;
 
 	/**
+	 * @param int|string $index
+	 * @param int $interpreter
 	 */
 	public function __construct($index, $interpreter = self::INT) {
 		if($interpreter == self::HEX) {

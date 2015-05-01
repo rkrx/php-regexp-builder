@@ -1,7 +1,6 @@
 <?php
 namespace Kir\RegExp\Builder\RegExpBuilder\Objects;
 
-use Kir\RegExp\Builder\RegExpBuilder\Expression\CacheAware;
 use Kir\RegExp\Builder\RegExpBuilder\Expression;
 
 class CaseSensitive extends GroupModifier {

@@ -2,7 +2,6 @@
 namespace Kir\RegExp\Builder\RegExpBuilder\Objects;
 
 use Kir\RegExp\Builder\RegExpBuilder\Expression;
-use Kir\RegExp\Builder\RegExpBuilder\Expression\CacheAware;
 
 class NegativeLookAhead implements Expression {
 	use Expression\CacheAware;

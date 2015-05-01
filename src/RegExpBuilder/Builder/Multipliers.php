@@ -10,12 +10,12 @@ class Multipliers {
 	private $stream = null;
 
 	/**
-	 * @var \Kir\RegExp\Builder\RegExpBuilder\Builder
+	 * @var Builder
 	 */
 	private $builder = null;
 
 	/**
-	 * @param \Kir\RegExp\Builder\RegExpBuilder\Builder $builder
+	 * @param Builder $builder
 	 * @param Stream $stream
 	 */
 	public function __construct(Builder $builder, Stream $stream) {
@@ -24,28 +24,28 @@ class Multipliers {
 	}
 
 	/**
-	 * @return \Kir\RegExp\Builder\RegExpBuilder\Builder
+	 * @return Builder
 	 */
 	public function once() {
 		return $this->builder;
 	}
 
 	/**
-	 * @return \Kir\RegExp\Builder\RegExpBuilder\Builder
+	 * @return Builder
 	 */
 	public function zeroOrOnce() {
 		return $this->write('?');
 	}
 
 	/**
-	 * @return \Kir\RegExp\Builder\RegExpBuilder\Builder
+	 * @return Builder
 	 */
 	public function onceOrMore() {
 		return $this->write('+?');
 	}
 
 	/**
-	 * @return \Kir\RegExp\Builder\RegExpBuilder\Builder
+	 * @return Builder
 	 */
 	public function zeroOrMore() {
 		return $this->write('*?');
@@ -53,14 +53,17 @@ class Multipliers {
 
 	/**
 	 * @params int $count
+	 * @param int $length
+	 * @return Builder
 	 */
 	public function exactly($length) {
 		return $this->write('{'."{$length}".'}');
 	}
 
 	/**
-	 * @params int $min
-	 * @params int $max
+	 * @param int $min
+	 * @param int $max
+	 * @return Builder
 	 */
 	public function limit($min = null, $max = null) {
 		return $this->write('{'."{$min},{$max}".'}');
@@ -68,7 +71,7 @@ class Multipliers {
 
 	/**
 	 * @param string $content
-	 * @return \Kir\RegExp\Builder\RegExpBuilder\Builder
+	 * @return Builder
 	 */
 	private function write($content) {
 		$this->stream->add($content);
