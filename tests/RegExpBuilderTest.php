@@ -28,7 +28,7 @@ class RegExpBuilderTest extends \PHPUnit_Framework_TestCase {
 		->lineEnd()
 		->compile();
 
-		$this->assertEquals('/^(?:hello\sworld)[\[\]](?:(?:test)(?: )(?:\x{20AC})(?: )(?:a)?(?: )(?:b){3,6}(?:.)(?:c){6})[\[\]]$/u', (string) $pattern);
+		$this->assertEquals('/^(?:hello\\sworld)[\\[\\]](?:(?:test)(?: )(?:\\x{20AC})(?: )(?:a)?(?: )(?:b){3,6}(?:.)(?:c){6})[\\[\\]]$/u', (string) $pattern);
 	}
 
 	public function test2() {
@@ -54,7 +54,7 @@ class RegExpBuilderTest extends \PHPUnit_Framework_TestCase {
 		->lineEnd()
 		->compile();
 
-		$this->assertEquals('/^(?P<a>(?<![\.\-])[\._\-\+\p{L}\d]+?(?![\.\-]))(?:@)(?P<b>(?<![\.\-])[\.\-\p{L}\d]+?(?![\.\-]))$/u', (string) $pattern);
+		$this->assertEquals('/^(?P<a>(?<![\\.\\-])[\\._\\-\\+\\p{L}\\d]+?(?![\\.\\-]))(?:@)(?P<b>(?<![\\.\\-])[\\.\\-\\p{L}\\d]+?(?![\\.\\-]))$/u', (string) $pattern);
 		$this->assertTrue($pattern->test('max.mustermann+github@googlemail.com'));
 
 		$groups = $pattern->getGroups('max.mustermann+github@googlemail.com');

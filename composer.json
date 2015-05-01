@@ -1,9 +1,10 @@
 {
+	"name": "rkr/regexp-builder",
+	"description": "A builder for regular expressions",
 	"require": {
 		"php": ">= 5.4"
 	},
 	"require-dev": {
-		"php": ">= 5.4",
 		"phpunit/phpunit": "~3.7"
 	},
 	"autoload": {
